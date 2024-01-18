@@ -1,6 +1,11 @@
 pipeline {
     agent { label 'agent1' }
     stages {
+        stage('Install Apache2') {
+            steps {
+                sh 'apt install apache2 -y'
+            }
+        }
         stage('Build') {
             steps {
                 sh 'npm install'
