@@ -9,4 +9,4 @@ set -x
 npm run build
 set +x
 
-cp build/. /var/www/html/.
+cp -a build/. /var/www/html/.
