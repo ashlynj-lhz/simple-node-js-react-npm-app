@@ -7,6 +7,12 @@ pipeline {
                 sh 'sudo systemctl start apache2'
             }
         }
+        stage('Set env') {
+            steps {
+                sh 'echo "dev" >> .env'
+                sh 'cat .env'
+            }
+        }
         stage('Build') {
             steps {
                 sh 'npm install'
