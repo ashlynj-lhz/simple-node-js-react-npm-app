@@ -9,7 +9,7 @@ pipeline {
         }
         stage('Set env') {
             steps {
-                sh 'echo "test" >> .env'
+                sh 'echo "dev" > .env'
                 sh 'cat .env'
             }
         }
