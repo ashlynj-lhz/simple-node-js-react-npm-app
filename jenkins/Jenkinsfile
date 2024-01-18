@@ -1,9 +1,10 @@
 pipeline {
     agent { label 'agent1' }
     stages {
-        stage('Install Apache2') {
+        stage('Install & Start Apache2') {
             steps {
                 sh 'sudo apt install apache2 -y'
+                sh 'sudo systemctl start apache2'
             }
         }
         stage('Build') {
